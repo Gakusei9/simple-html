@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .box1 {
+      height: 300px;
+      width: 300px;
+      background-color: yellow;
+      border: 3px solid black;
+      margin: 10px;
+    }
+    
+    .box2 {
+      height: 300px;
+      width: 300px;
+      background-color: pink;
+      border: 3px dotted black;
+      margin: 10px;
+      
+    }
+    
+    .box3 {
+      height: 300px;
+      width: 300px;
+      background-color: green;
+      border: 3px dashed black;
+      margin: 10px;
+    }
+    
+  </style>
+  <title>My Border Box</title>
+</head>
+<body>
+  <div class="box1"></div>
+  <div class="box2"></div>
+  <div class="box3"></div>
+</body>
+</html>
