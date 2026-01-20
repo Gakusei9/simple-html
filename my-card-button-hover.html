@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        
+        .card {
+          display: flex;
+          flex-direction: column;
+            width: 300px;
+          height: 220px;
+          padding: 20px;
+          box-shadow: 3px 3px 5px grey;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 10px;
+            
+            transition: background-color 0.3s ease;
+        }
+
+        .card h2 {
+            margin: 0;
+            text-align: center;
+            color: white;
+        }
+
+        .card p {
+            margin: 5px 0 0 0;
+            text-align: center;
+            color: white;
+        }
+
+
+        .card-button {
+        
+            background-color: #007BFF;
+            padding: 15px 30px;
+            font-size: 16px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            bottom: 20px;
+          margin-top: auto;
+          align-self: center
+          
+          
+         
+            
+        }
+
+        .card-button:hover {
+            background-color: #0056b3;
+        }
+        
+    </style>   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My card button hover</title>
+</head>
+<body>
+    <div class="card">
+        <h2> My first card</h2>
+        <p> This is a text inside the box that should look like a card </p>
+        <button class="card-button">Click Me</button>
+    </div>
+
+    
+ 
+    
+       
+  
+</body>
+</html>
