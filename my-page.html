@@ -1,201 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My page</title>
+
   <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
     
     body {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      
+      font-family: Arial, sans-serif;
     }
+
     
     nav {
       display: flex;
       background-color: lightgrey;
       padding: 15px;
       border-radius: 10px;
-      margin-right: 15px;
-      
+      margin: 15px;
     }
-    
-    ul {
+
+    nav ul {
       display: flex;
       gap: 20px;
-      padding-left: 10px;
       list-style: none;
+      width: 100%;
+      align-items: center;
     }
+
     nav a {
       color: black;
       text-decoration: none;
     }
-    
-    .contact,  .about {
-      color: green;
-      display: flex;
-      gap: 20px;
+
+    .contact,
+    .about {
       margin-left: auto;
+      color: green;
     }
+
     
-   
-    
-    footer  {
-      display: flex;
-      padding: 15px;
-      background-color: lightgrey;
-      border-radius: 15px;
-      margin-bottom: 15px;
-      margin-top: auto;
-      justify-content: flex-end;
-    }
-    
-    footer a  {
-      text-decoration: none;
-      color: black;
-      
-    }
-    
-    .profil {
+    .hero {
       display: flex;
       justify-content: center;
+      margin-top: 80px;
+    }
+
+    .profil {
+      position: relative; 
+      display: flex;
+      flex-direction: column;
       align-items: center;
       height: 380px;
       width: 300px;
-      margin: auto;
       border-radius: 25px;
       background-color: #f6f0e6;
-      margin-top: 100px;
       box-shadow: 5px 5px lightgray;
+      padding-top: 30px;
     }
+
+    .profil img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .profil h4 {
+      margin-bottom: 8px;
+    }
+
+    .profil h3 {
+      margin-bottom: 20px;
+      font-weight: normal;
+    }
+
+    .profil button {
+      margin-top: auto;
+      margin-bottom: 25px;
+      height: 30px;
+      width: 70px;
+      border: none;
+      background-color: #004EFF;
+      color: white;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .profil button:hover {
+      transform: scale(1.1);
+      transition: 0.3s;
+      box-shadow: 3px 3px lightgray;
+    }
+
     
     .projects {
       display: flex;
       justify-content: center;
       gap: 40px;
-      
-      
+      flex-wrap: wrap;
+      margin-top: 100px;
     }
-    
+
     .project {
+      position: relative; 
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
       height: 380px;
       width: 300px;
       border-radius: 25px;
       background-color: #f6f0e6;
-      margin-top: 100px;
-      margin-bottom: 100px;
       box-shadow: 5px 5px lightgray;
+      padding-top: 30px;
     }
-    
-    .project h3 {
-      position: absolute;
-      margin-top: 60px;
-    }
-    
-    
+
     .project img {
-      margin: auto;
-      height: 150px;
       width: 150px;
-      border-radius: 100%;
-      margin-bottom: 120px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 20px;
     }
-    
+
+    .project h5 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .project p {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
     .project button {
-      position: absolute;
+      margin-top: auto;
+      margin-bottom: 25px;
       height: 30px;
       width: 70px;
       border: none;
       background-color: #004EFF;
       color: white;
       border-radius: 20px;
-      margin-top: 250px;
-    }
-    
-    .project button:hover {
-       cursor: pointer;
-      transform: scale(1.1);
-      transition: 0.3s;
-      box-shadow: 3px 3px lightgray;
-    }
-    
-    img {
-      height: 150px;
-      width: 150px;
-      border-radius: 100%;
-      margin-bottom: 120px;
-    }
-    
-    .hero h4 {
-      position: absolute;
-      margin-top: 100px;
-    }
-    
-    .hero h3 {
-      position: absolute;
-      margin-top: 150px;
-    }
-    
-    .hero button {
-      position: absolute;
-      height: 30px;
-      width: 70px;
-      border: none;
-      background-color: #004EFF;
-      color: white;
-      border-radius: 20px;
-      margin-top: 250px;
-    }
-    .hero button:hover {
       cursor: pointer;
+    }
+
+    .project button:hover {
       transform: scale(1.1);
       transition: 0.3s;
       box-shadow: 3px 3px lightgray;
     }
-  
-  </style>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My page</title>
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a class="contact" href="#">Contact</a></li>
-            <li><a class="about" href="#">About</a></li>
-        </ul>
-    </nav>
-
-    <section class="hero">
-    <div class="profil"><img src="https://i.pinimg.com/736x/4a/1b/04/4a1b04564888eeda76d049f51f4f5d1a.jpg" alt='profil-picture'>
-      <h4>Younous Kone</h4>
-      <h3>Full Stack Devoleper</h3>
-      <button>Hire</button>
-      </div>
-    </section>
-
-    <section class="projects">
-      <div class="project"><img src="https://d31dpzy4bseog7.cloudfront.net/media/2026/01/15185547/Tamarama-Residence-by-Flack-Studio-The-Local-Project-Image-38.jpg" alt='architecture'><h3>Architectural Website Project</h3><button>View</button></div>
-      <div class="project"><img src="https://i.pinimg.com/736x/92/29/16/922916237d3497e0269c91fcb395a5b8.jpg" alt='Ecom'><h3>E-commerce Website Project</h3><button>View</button></div>
-      <div class="project"><img src="https://i.pinimg.com/1200x/70/c8/30/70c83058aa1590b416cad6f34a8b8267.jpg" alt='museum'><h3>Museum Website Project</h3><button>View</button></div>
-
-    </section>
     
+    footer {
+      display: flex;
+      justify-content: flex-end;
+      background-color: lightgrey;
+      padding: 15px;
+      border-radius: 15px;
+      margin: 15px;
+      margin-top: auto;
+    }
+
+    footer ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a class="contact" href="#">Contact</a></li>
+      <li><a class="about" href="#">About</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="profil">
+      <img src="https://i.pinimg.com/736x/4a/1b/04/4a1b04564888eeda76d049f51f4f5d1a.jpg" alt="profil">
+      <h4>Younous Kone</h4>
+      <h3>Full Stack Developer</h3>
+      <button>Hire</button>
+    </div>
   </section>
 
-    <footer>
-        <p></p>
-        <ul>
-            <li><a href="#">GitHub</a></li>
-            <li><a href="#">LinkedIn</a></li>
-            <li><a href="#">Twitter</a></li>
-        </ul>
-    </footer>
-    
+  <section class="projects">
+    <div class="project">
+      <img src="https://d31dpzy4bseog7.cloudfront.net/media/2026/01/15185547/Tamarama-Residence-by-Flack-Studio-The-Local-Project-Image-38.jpg">
+      <h5>Architectural Website</h5>
+      <p>Design and development of a modern architectural website.</p>
+      <button>View</button>
+    </div>
+
+    <div class="project">
+      <img src="https://i.pinimg.com/736x/92/29/16/922916237d3497e0269c91fcb395a5b8.jpg">
+      <h5>E-commerce Website</h5>
+      <p>Design and development of a modern commercial website.</p>
+      <button>View</button>
+    </div>
+
+    <div class="project">
+      <img src="https://i.pinimg.com/1200x/70/c8/30/70c83058aa1590b416cad6f34a8b8267.jpg">
+      <h5>Museum Website</h5><p></p>
+      <p>Design and development of a modern museum website.</p>
+      <button>View</button>
+    </div>
+  </section>
+
+  <footer>
+    <ul>
+      <li><a href="#">GitHub</a></li>
+      <li><a href="#">LinkedIn</a></li>
+      <li><a href="#">Twitter</a></li>
+    </ul>
+  </footer>
+
 </body>
 </html>
