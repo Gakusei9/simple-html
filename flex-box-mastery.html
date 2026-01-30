@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      font-family: sans-serif;
+      overflow: auto;
+    }
+    
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .main-content {
+      display: flex;
+      flex: 1; 
+      gap: 20px;
+      padding: 20px;
+      overflow: hidden;
+    }
+    
+    main {
+      flex: 5; 
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+    
+    aside {
+      display: flex;
+      flex: 1; 
+      background-color: #e0e0e0;
+      padding: 20px;
+      flex-direction: column;
+      overflow-y: none;
+    }
+    
+    .img {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 80px;
+      width: 80px;
+      border-radius: 100%;
+      background-color: black;
+      margin-top: 20px;
+      margin-right: 20px;
+      color: white;
+    }
+    
+    .images {
+      display: flex;
+      margin-top: 0px;
+      flex-wrap: wrap;
+    }
+    
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Website</h1>
+  </header>
+  
+  <div class="main-content">
+    <main>
+      <h2>Main Content</h2>
+      <p>This is the main content area.</p>
+      <div class="images">
+      <div class='img'>1</div>
+      <div class='img'>2</div>
+      <div class='img'>3</div>
+      <div class='img'>4</div>
+      <div class='img'>5</div>
+      <div class='img'>6</div>
+      <div class='img'>7</div>
+      <div class='img'>7</div>
+      <div class='img'>9</div>
+      <div class='img'>10</div>
+      <div class='img'>11</div>
+      <div class='img'>12</div>
+      <div class='img'>13</div>
+      <div class='img'>14</div>
+        
+      </div>
+    </main>
+    
+    <aside>
+      <h3>Sidebar</h3>
+      <p>This is the sidebar.</p>
+       <div class="images">
+      <div class='img'>1</div>
+      <div class='img'>2</div>
+      <div class='img'>3</div>
+      <div class='img'>4</div>
+      <div class='img'>5</div>
+         
+      </div>
+    </aside>
+  </div>
+  
+  <footer>
+    <p>&copy; 2026 My Website</p>
+  </footer>
+</body>
+</html>

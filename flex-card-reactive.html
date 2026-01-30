@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+  .card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px;
+  }
+  
+  .card {
+    flex: 1 1 450px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+  }
+  
+  .card:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .card button {
+    padding: 11px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2962ff;
+    color: white;
+  }
+  
+  .card button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.2s;
+  }
+
+    footer {
+        margin-left: 0;
+        text-align: center;
+        padding: 20px;
+        background-color: lightgray;
+        margin-top: 20px;
+        width: 100%;
+    }
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Card Grid</title>
+</head>
+<body>
+    <div class="card-grid">
+  <div class="card">
+    <img src="https://i.pinimg.com/736x/19/b9/fe/19b9fef375976bd5b251f0e1aa441bf7.jpg" alt="project">
+    <h3>Project 1</h3>
+    <p>Description here</p>
+    <button>choose</button>
+  </div>
+  
+  <div class="card">
+    <img src="https://i.pinimg.com/736x/7a/47/84/7a4784fb5fd741c662a95a6c5686be0d.jpg" alt="project">
+    <h3>Project 2</h3>
+    <p>Description here</p>
+    <button>choose</button>
+  </div>
+  
+  <div class="card">
+    <img src="https://i.pinimg.com/736x/d1/1d/42/d11d42aca1d0991970151da3d3425787.jpg" alt="project">
+    <h3>Project 3</h3>
+    <p>Description here</p>
+    <button>choose</button>
+  </div>
+  
+  <div class="card">
+    <img src="https://i.pinimg.com/1200x/e2/4b/e1/e24be19dd916e4668291cab543e4b192.jpg" alt="project">
+    <h3>Project 4</h3>
+    <p>Description here</p>
+    <button>choose</button>
+  </div>
+</div>
+<footer>
+  <p>&copy; 2026 My Website</p>
+</footer>
+</body>
+</html>

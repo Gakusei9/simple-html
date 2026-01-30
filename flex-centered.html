@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+
+        * {
+            box-sizing: border-box ;
+        }
+
+    body {
+      margin: 0;
+    }
+
+  .center-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    
+  }
+  
+  .content {
+    text-align: center;
+    color: white;
+  }
+  
+  .content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .content button {
+    margin: 10px;
+    flex-direction: row;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: white;
+    color: #667eea;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    
+  }
+  
+  .content button:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+  
+  img {
+    height: 260px;
+    width: 190px;
+    border: none;
+    border-radius: 15px;
+    object-fit: cover;
+    border: 1px solid white;
+   
+  }
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Centered</title>
+</head>
+<body>
+    <div class="center-box">
+  <div class="content">
+    <img src='https://i.pinimg.com/736x/95/d6/39/95d6399add2581c93e1a286d1a19748f.jpg'</img>
+    <h1>Welcome Back!</h1>
+    <p>You just coded on a train to London</p>
+    <button>Journey History</button><button>Continue Journey</button>
+  </div>
+</div>
+</body>
+</html>
