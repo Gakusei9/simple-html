@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      padding: 20px;
+      font-family: sans-serif;
+    }
+    
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 200px);
+      gap: 20px;
+    }
+    
+    .box {
+      background-color: lightblue;
+      padding: 40px;
+      text-align: center;
+      border-radius: 10px;
+      font-size: 24px;
+    }
+    
+    .box:hover {
+      background-color: blue;
+      color: white;
+      transform: scale(1.05);
+      transition: 0.4s;
+      cursor: pointer;
+    }
+    
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Reviews</title>
+</head>
+<body>
+  <h1>Grid practice 3 column<h1>
+    <div class='grid'>
+      <div class='box'>1</div>
+      <div class='box'>2</div>
+      <div class='box'>3</div>
+      <div class='box'>4</div>
+      <div class='box'>5</div>
+      <div class='box'>6</div>
+    </div>
+</body>
+</html>
