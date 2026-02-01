@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+    }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  .gallery-item {
+    position: relative;
+    overflow: visible;
+    justify-content: center;
+    
+  }
+    
+  .gallery-item:hover {
+    transform: scale(1.01);
+    transition: 0.3s;
+    }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+    border-radius: 10px;
+  }
+  
+  .gallery-item img:hover {
+    transform: scale(1.05); 
+    cursor: pointer;
+  }
+    .gallery-item figure {
+  margin: 0;
+}
+
+.gallery-item figcaption {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+    
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 25px;
+      border-radius: 10px;
+      border: none;
+    }
+    
+    button:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+      transition: 0.4s;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Gallery</title>
+</head>
+<body>
+    <div class="gallery">
+  <div class="gallery-item">
+    <img src="https://i.pinimg.com/1200x/d1/86/16/d186160da608fcbc6710c2e36d3b3535.jpg" alt="photo 1"/>
+    <figcaption>Ideas of my first coffee shop</figcaption>
+    <button>view</button>
+  </div>
+  <div class="gallery-item">
+    <img src="https://i.pinimg.com/736x/ab/52/3a/ab523ae75d92a506a00b56cdada7342d.jpg" alt="photo 2"/>
+    <figcaption>Ideas of my the uniform</figcaption>
+    <button>view</button>
+  </div>
+  <div class="gallery-item">
+    <img src="https://i.pinimg.com/1200x/2e/23/96/2e23961b59b4f55cd0f4b8d9b8db1c75.jpg" alt="photo 3"/>
+    <figcaption>Ideas of the coffee cups</figcaption>
+    <button>view</button>
+  </div>
+  <div class="gallery-item">
+    <img src="https://i.pinimg.com/1200x/b8/1e/ff/b81eff3bc4c6133facd07b7b07ab75d2.jpg" alt="photo 4"/>
+    <figcaption>Ideas of the food item presentation</figcaption>
+    <button>view</button>
+  </div>
+  <div class="gallery-item">
+    <img src="https://i.pinimg.com/736x/f6/fe/74/f6fe74489259cff6a1a71d0eaf05895d.jpg" alt="photo 5"/>
+    <figcaption>Ideas of the dessert take away</figcaption>
+    <button>view</button>
+  </div>
+  <div class="gallery-item">
+    <img src="https://i.pinimg.com/736x/3a/a5/df/3aa5df5f88db54917390e924bb8a496b.jpg" alt="photo 6"/>
+    <figcaption>Ideas of the design interiors</figcaption>
+    <button>view</button>
+  </div>
+</div>
+</body>
+</html>
