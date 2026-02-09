@@ -1,0 +1,177 @@
+body {
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #f2f2f2;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+nav {
+  display: flex;
+  padding: 13px;
+  background: #222831;
+  color: white;
+  border-radius: 10px;
+  justify-content: space-between;
+  box-shadow: 3px 5px #455d7a;
+}
+
+nav ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+  cursor: pointer;
+  transform: translateY(-3px);
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  box-sizing: cover;
+  border-radius: 100%;
+  box-shadow: 3px 3px 4px #393e46;
+}
+
+
+.hero h1, h2, p {
+  text-align: center;
+  margin: 0px auto;
+  
+}
+
+.hero p {
+  margin-top: 10px;
+}
+
+.hero button {
+  margin: 15px;
+  padding: 15px;
+  background: rgb(10, 132, 255);
+  border-radius: 15px;
+  border: none;
+  color: white;
+  box-shadow: 3px 3px 4px #393e46;
+}
+
+.hero button:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.about {
+  display: grid;
+  margin-top: 10px;
+  grid-template-columns: 1fr 1fr;
+  margin: 30px;
+  
+}
+
+.about .cards {
+  padding: 15px;
+  margin: 30px;
+  border-radius: 10px;
+}
+
+.about h5 {
+  text-align: left;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.about h3 {
+  text-align: left;
+  font-size: 30px;
+}
+
+.project-grid {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 20px;
+}
+
+.project-grid .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 18px;
+  gap: 10px;
+  border-radius: 10px;
+  background: #e3e3e3;
+}
+
+.project-grid .card img {
+  object-fit: cover;
+  width: 400px;
+  height: 150px;
+  size: cover;
+  border-radius: 10px;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+form {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+footer {
+  background: #222831;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px; 
+}
+
+footer a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}

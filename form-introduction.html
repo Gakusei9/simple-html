@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      display: flex; /* REVIEW: Flexbox centering */
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(
+  135deg,
+  #fcb69f 0%,      
+  #f6d5c0 35%,     
+  #d9c9e6 70%,    
+  #c1c6e4 100%     
+);
+      font-family: sans-serif;
+    }
+    
+    .form-container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 15px; /* REVIEW: Week 1 */
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* REVIEW: Week 1 */
+      width: 400px;
+    }
+    
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #555;
+      font-weight: 500;
+    }
+    
+    input,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: border-color 0.3s;
+    }
+    
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #667eea;
+    }
+    
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    
+    button {
+      width: 100%;
+      padding: 14px;
+      background-color: #724832;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s; /* REVIEW: Week 1 */
+    }
+    
+    button:hover {
+      background-color: #8a622e;
+      transform: translateY(-2px); /* REVIEW: Week 1 */
+      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    }
+    
+    i {
+      display: flex;
+      margin-left: 5px;
+      margin-top: auto;
+      
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Get in Touch</h2>
+    
+    <form>
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="your@email.com">
+      </div>
+      
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Write your message here..."></textarea>
+      </div>
+      
+      <button type="submit">Send Message  <i class="glyphicon glyphicon-envelope"></i></button>
+    </form>
+  </div>
+</body>
+</html>

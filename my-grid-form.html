@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body {
+      background-image: url("https://images.unsplash.com/photo-1579541513287-3f17a5d8d62c?q=80&w=1352&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 60px;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: helvetica;
+    }
+    
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 110px;
+      
+    }
+  
+   .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px #556B2F;
+   
+  }
+    
+    .form-content {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: auto;
+      margin: auto;
+    }
+    
+    
+ .adress {
+  display: flex;
+  gap: 40px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 6px;
+}
+    
+    .form-grid h2 {
+      text-align: center;
+      font-size: 30px;
+      font-weight: normal;
+      margin-bottom: 70px;
+    }
+    
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 10px;
+      border: 1px solid black;
+      margin-bottom: 20px;
+    }
+
+      .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+  }
+  
+  input[type="checkbox"] {
+    width: auto;
+  }
+  
+  .form-footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+  }
+    
+    button {
+       border-radius: 15px;
+       border: none;
+       padding: 14px;
+    }
+    
+    button:hover {
+      cursor: pointer;
+      transform: scale(1.03);
+      transition: 0.3s;
+      
+    }
+  
+  .form-footer a {
+    color: #667eea;
+    text-decoration: none;
+  }
+  
+  .form-footer a:hover {
+    text-decoration: underline;
+    
+  }
+    
+    .information h2 {
+      margin-bottom: 65px;
+      font-size: 60px;
+      
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Forms and grid</title>
+</head>
+<body>
+  <form>
+    
+    <div class="form-grid">
+    <div class="form">
+      
+      <div class="form-content">
+        <h2>Your Information</h2>
+        <label for="name">Your name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="your@email">
+        
+        <div class="adress">
+          <div class="text">
+          <label for="adress">Adress</label>
+        <input type="adress" id="adress" autocomplete="adress" placeholder="10, Rue de France">
+            </div>
+        
+        <div class="text">
+        <label for="postal-code">postal code</label>
+        <input type="postal-code" id="postal-code" placeholder="75000">
+        </div>
+          </div>
+        
+        <label for="password">Password</label>
+        <input type="password" id="password" autocomplete="new-password" placeholder="Min. 8 characters">
+        
+        <label for="confirm-password">Confirm password</label>
+        <input type="confirm-password" id="confirm-password" autocomplete="new-password" placeholder="Min. 8 characters">
+        
+         <div class="checkbox-group">
+      <input type="checkbox" id="terms">
+      <label for="terms">I agree to Terms & Conditions</label>
+    </div>
+    
+    <button type="submit">Sign Up</button>
+    
+    <div class="form-footer">
+      Already have an account? <a href="#">Log in</a>
+    </div>
+          
+      </div>
+      </div>
+      
+      
+      
+      
+      
+      <div class="form">
+      <div class="form-content">
+        
+        <div class="information">
+        <h2>Information</h2>
+        </div>
+          
+<p>We believe that good communication starts with attention and respect. This form is not a formality, and your message is not treated as data to be processed. Every piece of information you choose to share helps us understand who you are and what you need, so we can respond with accuracy rather than assumptions.</p> 
+
+<p>Your time matters, and so does your privacy. The details entered here are used only for the purpose of this exchange. We do not sell, automate, or repurpose personal information. Everything is handled carefully, with discretion and intention, because trust is built in small, consistent ways.</p>
+
+<p>Behind this form are real people. We take the time to read each message fully, to understand context, and to respond thoughtfully. There is no rush to close conversations or reduce them to templates. Clarity, honesty, and relevance guide every response.</p>
+
+<p>We also believe in simplicity. This space is designed to be calm and straightforward, allowing you to express yourself without friction. Whether your message is short or detailed, practical or reflective, it is received with the same level of attention.</p>
+
+<p>Thank you for taking the time to write. Meaningful exchanges begin with care on both sides, and we appreciate the trust you place in us by starting this conversation.</p>
+      </div>
+        
+        <div class="checkbox-group">
+      <input type="checkbox" id="terms">
+      <label for="terms">I agree and engage myself to respect those conditions</label>
+    </div>
+      
+      
+      
+    </div>
+    </div>
+    
+  </form>
+  </div>
+</body>
+
+</html>
