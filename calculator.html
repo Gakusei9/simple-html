@@ -1,0 +1,34 @@
+<input type="number" id="num1" placeholder="first number">
+<input type="number" id="num2" placeholder="second number">
+
+<div>
+  <button id="add">+</button>
+  <button id="subtract">-</button>
+  <button id="multiply">*</button>
+  <button id="divide">÷</button>
+</div>
+
+<h2 id="result">Result: 0</h2>
+
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 5px;
+    gap: 2px;
+  }
+  button {
+    padding: 5px;
+  }
+</style>
+
+<script src="calculator.js"></script>

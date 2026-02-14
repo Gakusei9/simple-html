@@ -5,6 +5,7 @@
     let resetButton = document.getElementById("resetButton");
     const button = document.getElementById("changeh1");
     const title = document.getElementById("title");
+    const dontButton = document.getElementById("dont");
     
     let count = 0;
     
@@ -21,6 +22,10 @@
     resetButton.onclick = function() {
       count = 0;
       numberDisplay.innerHTML = count;
+    };
+
+    dontButton.onclick = function() {
+      alert("I told you not to click me!");
     };
     
 button.onclick = function() {

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game number</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      background: url("https://i.pinimg.com/736x/50/e9/39/50e93980b122b2ec87c323226536a170.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: white;
+      min-height: 100vh;
+      font-family: sans-serif;
+    }
+    
+    .game-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    
+    .game-container input {
+      width: 100px;
+      border-radius: 5px;
+    }
+    
+    .game-container button {
+      width: 70px;
+      color: white;
+      background-color: #c7b198;
+      border-radius: 5px;
+    }
+    
+    .game-container button:hover {
+      cursor: pointer;
+      transform: scale(1.02);
+      transition: 0.9s;
+    }
+  </style>
+</head>
+<body>
+    <div class="game-container">
+  <h2>Guess the Number (1-10)</h2>
+  <input type="number" id="guessInput" placeholder="Enter guess">
+  <button id="guessButton">Guess</button>
+  
+  <p id="message">Make a guess!</p>
+  <p id="attempts">Attempts: 0</p>
+  <button id="restartButton">New Game</button>
+  </div>
+  <script>
+let guessInput = document.getElementById("guessInput");
+let guessButton = document.getElementById("guessButton");
+let message = document.getElementById("message");
+let attemptsDisplay = document.getElementById("attempts");
+let restartButton = document.getElementById("restartButton");
+    
+let secretNumber = Math.floor(Math.random() * 10) + 1;
+let attempts = 0;
+    
+guessButton.onclick = function() {
+  let userGuess = parseInt(guessInput.value);
+  attempts = attempts + 1;
+  
+    if (userGuess === secretNumber) {
+    message.innerHTML = "🎉 Correct! The number was " + secretNumber;
+    message.style.color = "#93e4c1";
+  } else if (userGuess > secretNumber) {
+    message.innerHTML = "Too high! Try again.";
+    message.style.color = "red";
+  } else {
+    message.innerHTML = "Too low! Try again.";
+    message.style.color = "blue";
+  }
+  
+  attemptsDisplay.innerHTML = "Attempts: " + attempts;
+  guessInput.value = "";
+};
+
+restartButton.onclick = function() {
+  secretNumber = Math.floor(Math.random() * 10) + 1;
+  attempts = 0;
+  message.innerHTML = "Make a guess!";
+  message.style.color = "white";
+  attemptsDisplay.innerHTML = "Attempts: 0";
+};
+  </script>
+</body>
+</html>
