@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      min-height: 100vh;
+      padding: 20px;
+      background: #f5f7fa;
+      font-family: Arial;
+    }
+    
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    
+    button {
+      padding: 10px 15px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      background: #4a90e2;
+      color: white;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background: #357abd;
+    }
+    
+    input {
+      padding: 10px;
+      border: 1px solid #e1e4e8;
+      border-radius: 5px;
+      margin: 10px 0;
+    }
+    
+    .color-box {
+      width: 150px;
+      height: 150px;
+      background: gray;
+      margin: 20px auto;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>My JavaScript Dashboard</h1>
+  
+  <div class="dashboard">
+    
+    <div class="card">
+      <h2>Counter</h2>
+      <h1 id="count">0</h1>
+      <button id="plus1">+1</button>
+      <button id="minus1">-1</button>
+      <button id="plus10">+10</button>
+      <button id="reset">Reset</button>
+    </div>
+    
+  
+    <div class="card">
+      <h2>Color Selector</h2>
+      <div id="colorBox" class="color-box"></div>
+      <button id="red">Red</button>
+      <button id="blue">Blue</button>
+      <button id="green">Green</button>
+      <button id="random">Random</button>
+    </div>
+    
+  
+    <div class="card">
+      <h2>Message Display</h2>
+      <input type="text" id="messageInput" placeholder="Enter message">
+      <button id="displayBtn">Display</button>
+      <button id="clearBtn">Clear</button>
+      <h3 id="messageOutput"></h3>
+    </div>
+    
+    
+    <div class="card">
+      <h2>Greetings</h2>
+      <h2 id="greeting">Hello</h2>
+      <button id="english">English</button>
+      <button id="french">French</button>
+      <button id="arabic">Arabic</button>
+      <button id="japanese">Japanese</button>
+    </div>
+  </div>
+  
+  <script>
+let count = document.getElementById("count");
+let plus1 = document.getElementById("plus1");
+let minus1 = document. getElementById("minus1");
+let plus10 = document.getElementById("plus10");
+let reset = document. getElementById("reset");
+
+let number = 0;
+    
+plus1.onclick = function() {
+  number = number + 1;
+  count.innerHTML = number;
+};
+    
+    minus1.onclick = function() {
+  number = number - 1;
+  count.innerHTML = number;
+};
+    
+    plus10.onclick = function() {
+  number = number + 10;
+  count.innerHTML = number;
+};
+    
+    reset.onclick = function() {
+  number = 0;
+  count.innerHTML = number;
+};
+    
+let colorbox = document.getElementById("colorBox");
+let red = document.getElementById("red");
+let blue = document. getElementById("blue");
+let green = document.getElementById("green");
+let random = document. getElementById("random");
+    
+red.onclick = function() {
+  colorbox.style.background = "red";
+};
+    
+    blue.onclick = function() {
+  colorbox.style.background = "blue";
+};
+    
+    green.onclick = function() {
+  colorbox.style.background = "green";
+};
+    
+ random.onclick = function() {
+  if (colorbox.style.background === "white") {
+    let randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+    colorbox.style.background = randomColor;
+  } else {
+    colorbox.style.background = "white";
+  }
+};
+    
+let message = document.getElementById("messageInput");
+let display = document. getElementById ("displayBtn");
+let clear = document.getElementById("clearBtn");
+let output = document. getElementById("messageOutput");
+    
+    display.onclick = function() {
+      let text = message.value;
+      output.innerHTML = text;
+    };
+    
+    clear.onclick = function() {
+      output.innerHTML = "";
+    };
+    
+    let hello = document.getElementById("greeting");
+    let english = document.getElementById("english");
+    let french = document.getElementById("french");
+    let arabic = document.getElementById("arabic");
+    let japanese = document.getElementById("japanese");
+    
+    english.onclick = function() {
+      greeting.innerHTML = "Hi!";
+    };
+    
+    french.onclick = function() {
+      greeting.innerHTML = "Bonjour!";
+    };
+    
+    arabic.onclick = function() {
+      greeting.innerHTML = "السلام عليكم";
+    };
+    
+    japanese.onclick = function() {
+      greeting.innerHTML = "こんにちは";
+    };
+  </script>
+</body>
+</html>

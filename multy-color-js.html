@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      
+      min-height: 100vh;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  </style>
+  <title>Color Changer JS</title>
+</head>
+<body>
+  <div id="box" style="width: 300px; height: 300px; background: gray;"></div>
+
+<button id="red">Red</button>
+<button id="blue">Blue</button>
+<button id="green">Green</button>
+<button id="yellow">Yellow</button>
+<button id="random">Random</button>
+
+<script>
+let box = document.getElementById("box");
+let redBtn = document.getElementById("red");
+let blueBtn = document.getElementById("blue");
+let greenBtn = document.getElementById("green");
+let yellowBtn = document.getElementById("yellow");
+let randomBtn = document.getElementById("random");
+
+redBtn.onclick = function() {
+  box.style.backgroundColor = "red";
+};
+
+blueBtn.onclick = function() {
+  box.style.backgroundColor = "blue";
+};
+
+greenBtn.onclick = function() {
+  box.style.backgroundColor = "green";
+};
+
+yellowBtn.onclick = function() {
+  box.style.backgroundColor = "yellow";
+};
+
+randomBtn.onclick = function() {
+  let randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+  box.style.backgroundColor = randomColor;
+};
+</script>
+</body>
+</html>

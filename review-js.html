@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      min-height: 100vh;
+      background: url("https://i.pinimg.com/1200x/4c/3c/48/4c3c482b8af62e01626902573d6745f9.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      
+    }
+    
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin: 20px;
+    }
+    
+    .cards {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      background: #fbf8f3;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 2px 3px 3px black;
+      height: 400px;
+    }
+    
+  
+  </style>
+  <title>Review JS</title>
+</head>
+<body>
+  <div class="cards-container">
+  <div class="cards">
+  <div class="card1">
+  <h1 id="number">0</h1>
+    <button id="plusButton">+</button>
+    <button id="minusButton">-</button>
+    <button id="resetButton">reset</button>
+    </div>
+  </div>
+      <div id="color" class="cards">
+  <div  class="card2">
+    <h1 id="colorCode">#FFFF</h1>
+    <button id="changeColor">Change Colors</button>
+    </div>
+  </div>
+      <div class="cards">
+  <div class="card3">
+    <button id="alert">Alert</button>
+    </div>
+  </div>
+      <div class="cards">
+  <div class="card4">
+    <h1 id="change">Here we are<h1>
+      <button id="changeText">Change Text</button>
+    </div>
+  </div>
+  </div>
+    <script>
+    let change = document.getElementById("change")
+    let changeButton = document.getElementById("changeText")
+    let alertButton = document.getElementById("alert")
+    let numberDisplay = document.getElementById("number");  
+    let plusButton = document.getElementById("plusButton");
+    let minusButton = document.getElementById("minusButton");
+    let resetButton = document.getElementById("resetButton");
+    let colorButton = document.getElementById("changeColor");
+    let colorDisplay = document.getElementById("colorCode");
+    let card = document.getElementById("color");
+      
+    
+      
+    let count = 0;
+      
+    changeButton.onclick = function() {
+      change.innerHTML = "You made this!";
+    };
+      
+    alertButton.onclick = function() {
+      alert("That an alert!");
+    };
+   
+    plusButton.onclick = function() {
+      count = count + 1;
+      numberDisplay.innerHTML = count;
+    };
+      
+   minusButton.onclick = function() {
+     count = count - 1;
+     numberDisplay.innerHTML = count;
+   };
+      
+    resetButton.onclick = function() {
+      count = 0;
+      numberDisplay.innerHTML = count;
+    };
+     
+      colorButton.onclick = function() {
+        let randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+        card.style.backgroundColor = randomColor;
+        colorDisplay.innerHTML = randomColor;
+      };
+    </script>
+</body>
+</html>

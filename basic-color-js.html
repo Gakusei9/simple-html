@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color basics</title>
+</head>
+<body>
+  <div id="box1">Box</div>
+  <button id="red">Red</button>
+  
+  <div id="box2">Box</div>
+  <button id="blue">Blue</button>
+  
+  <div id="box3">Box</div>
+  <button id="purple">Purple</button>
+  
+  <div id="box4">Box</div>
+  <button id="green">Green</button>
+  
+  <div id="box5">Box</div>
+  <button id="yellow">Yellow</button>
+  
+  <div id="box6">Box</div>
+  <button id="orange">Orange</button>
+  
+  <div>
+  <button id="reset" style="margin-top: 30px;">Reset</button>
+  </div>
+  <script>
+  let box1 = document.getElementById("box1");
+  let redBtn = document.getElementById("red");
+    
+   let box2 = document.getElementById("box2");
+  let blueBtn = document.getElementById("blue");
+    
+    let box3 = document.getElementById("box3");
+  let purpleBtn = document.getElementById("purple");
+    
+    let box4 = document.getElementById("box4");
+  let greenBtn = document.getElementById("green");
+    
+    let box5 = document.getElementById("box5");
+  let yellowBtn = document.getElementById("yellow");
+    
+    let box6 = document.getElementById("box6");
+  let orangeBtn = document.getElementById("orange");
+    
+    let reset = document.getElementById("reset")
+    
+  redBtn.onclick = function() {
+    box1.style.backgroundColor = "red";
+  };
+    
+ blueBtn.onclick = function() {
+   box2.style.background = "blue";
+ };
+    
+ purpleBtn.onclick = function() {
+   box3.style.background = "purple";
+ };
+    
+greenBtn.onclick = function() {
+  box4.style.background = "green";
+};
+    
+yellowBtn.onclick = function() {
+  box5.style.background = "yellow";
+};
+    
+orangeBtn.onclick = function() {
+  box6.style.background = "orange";
+};
+   
+reset.onclick = function() {
+  box1.style.background = "white";
+  box2.style.background = "white";
+  box3.style.background = "white";
+  box4.style.background = "white";
+  box5.style.background = "white";
+  box6.style.background = "white";
+};
+
+  </script>
+</body>
+</html>

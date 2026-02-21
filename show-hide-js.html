@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    
+    body {
+      min-height: 100vh;
+      background: #f5f7fa;
+      font-family: Arial;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      gap: 5px;
+    } 
+    
+    .boxes {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px;
+      gap: 10px;
+      
+    }
+    
+    .toggle {
+      margin: 20px;
+      gap:  5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+  </style>
+  <title>Show/Hide</title>
+</head>
+<body>
+  <div class="toggle">
+  <button id="btn1">Toggle Box 1</button>
+  <button id="btn2">Toggle Box 2</button>
+  <button id="btn3">Toggle Box 3</button>
+  </div>
+  
+  <div class="boxes">
+  <div id="box1" >Box 1</div>
+  <div id="box2" >Box 2</div>
+  <div id="box3" >Box 3</div>
+  </div>
+  
+  <script>
+  let btn1 = document.getElementById("btn1");
+let btn2 = document.getElementById("btn2");
+let btn3 = document.getElementById("btn3");
+
+let box1 = document.getElementById("box1");
+let box2 = document.getElementById("box2");
+let box3 = document.getElementById("box3");
+  
+    
+    btn1.onclick = function() {
+  if (box1.style.display === "none") {
+    box1.style.display = "block";
+  } else {
+    box1.style.display = "none";
+  }
+};
+
+btn2.onclick = function() {
+  if (box2.style.display === "none") {
+    box2.style.display = "block";
+  } else {
+    box2.style.display = "none";
+  }
+};
+
+btn3.onclick = function() {
+  if (box3.style.display === "none") {
+    box3.style.display = "block";
+  } else {
+    box3.style.display = "none";
+  }
+};
+  </script>
+</body>
+</html>
