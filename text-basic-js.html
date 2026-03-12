@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Basic JS</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 150px;
+    }
+    
+    .a, .r, .j, .input {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      
+    }
+  </style>
+</head>
+<body>
+  <h1 id="title">Hello</h1>
+  <button id="change">Change</button>
+  
+  
+  <div class="container">
+    
+  <div class="j">
+    <h2 id="j">Konishiwa</h2>
+    <button id="japan">Japan</button>
+  </div>
+    
+    
+  <div class="a">
+    <h2 id="a">As-salamu alaykum</h2>
+    <button id="arabic">Arabic</button>
+  </div>
+    
+    
+  <div class="r">
+    <h2 id="r">Prevyet</h2>
+    <button id="russian">Russian</button>
+  </div>
+    
+  </div>
+  
+  <div class="input">
+    
+<input type="text" id="input">
+<button id="btn">Display</button>
+<h1 id="output"></h1>
+
+  </div>
+  <script>
+  let title = document.getElementById("title");
+  let btn = document.getElementById("change");
+  let Rbtn = document.getElementById("russian");
+  let Jbtn = document.getElementById("japan");
+  let Abtn = document.getElementById("arabic");
+  let input = document.getElementById("input");
+  let btnd = document.getElementById("btn");
+  let output = document.getElementById("output");
+  let j = document.getElementById("j");
+  let r = document.getElementById("r");
+  let a = document.getElementById("a");
+  
+    
+ btnd.onclick = function() {
+  let text = input.value;
+  output.innerHTML = text;
+};
+    
+ Jbtn.onclick = function() {
+   j.innerHTML = "こんにちは";
+ };
+    
+    Rbtn.onclick = function() {
+   r.innerHTML = "Здравствуйте";
+ };
+    
+    Abtn.onclick = function() {
+   a.innerHTML = ".السلام عليكم";
+ };
+    
+  btn.onclick = function() {
+    if (title.innerHTML === "Hello") {
+      title.innerHTML = "Bonjour"
+    } else {
+      title.innerHTML = "Hello"
+    };
+  };
+  </script>
+</body>
+ 

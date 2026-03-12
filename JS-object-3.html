@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <ul id="teamList"></ul>
+  <button id="addBtn">Add Player</button>
+
+  <script>
+    let team = [
+      { name: "Mbappe", goals: 30 },
+      { name: "Benzema", goals: 25 },
+      { name: "Vinicius", goals: 20 }
+    ];
+
+    let teamList = document.getElementById("teamList");
+    let addBtn = document.getElementById("addBtn");
+
+    function showTeam() {
+      teamList.innerHTML = "";
+      for (let i = 0; i < team.length; i++) {
+        let li = document.createElement("li");
+        li.innerHTML = team[i].name + " - Goals: " + team[i].goals;
+        teamList.appendChild(li);
+      }
+    }
+
+    showTeam();
+
+    addBtn.onclick = function() {
+      team.push({name: "Ronaldo", goals: 18});
+      showTeam();
+    };
+  </script>
+</body>
+</html>

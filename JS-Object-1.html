@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <div id="output"></div>
+  <button id="showBtn">Show</button>
+  <button id="updateBtn">Update Club</button>
+
+  <script>
+    let player = {
+      name: "Zidane",
+      age: 52,
+      club: "Retired"
+    };
+
+    let output = document.getElementById("output");
+    let showBtn = document.getElementById("showBtn");
+    let updateBtn = document.getElementById("updateBtn");
+
+    function showPlayer() {
+    output.innerHTML = "";
+    output.innerHTML = player.name + "<br>" + player.age + "<br>" + player.club + "<br>"
+    }
+
+    showPlayer();
+
+    updateBtn.onclick = function() {
+      player.club = "Real Madrid Coach";
+      showPlayer();
+      
+    };
+  </script>
+</body>
+</html>

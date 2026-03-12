@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Shopping List</h2>
+<input id="itemInput" placeholder="Add item">
+<button id="addBtn">Add</button>
+<ul id="shopList"></ul>
+<script>
+  let items = ["Milk", "Bread"];
+  let itemInput = document.getElementById("itemInput");
+  let addBtn = document.getElementById("addBtn");
+  let shopList = document.getElementById("shopList");
+
+  function showItems() {
+    shopList.innerHTML = "";
+    for (let i = 0; i < items.length; i++) {
+      let li = document.createElement("li");
+      li.innerHTML = items[i];
+
+      let deleteBtn = document.createElement("button");
+      deleteBtn.innerHTML = "Remove";
+      deleteBtn.onclick = function() {
+         let index = items.indexOf(items[i]);
+          items.splice(index, 1);
+          showItems();
+      }
+
+      li.appendChild(deleteBtn);
+      shopList.appendChild(li);
+    }
+  }
+
+  showItems();
+
+  addBtn.onclick = function() {
+    let newItem = itemInput.value;
+      items.push(newItem);
+      showItems();
+      itemInput.value = "";
+  }
+</script>
+</body>
+</html>
+

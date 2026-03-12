@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript Object 2</title>
+</head>
+<body>
+  <div id = "output"></div>
+  <button id = "showBtn">Show</button>
+  <button id = "transferBtn">Trasfer to PSG</button>
+  
+  <script>
+  let player = {
+    name: "Mbappe",
+    age: 25,
+    club: "Real Madrid"
+  };
+    
+    let output = document.getElementById("output");
+    let ShowBtn = document.getElementById("showBtn");
+    let transferBtn = document.getElementById("transferBtn");
+    
+    function showPlayer() {
+      output.innerHTML = "";
+      output.innerHTML = player.name + "<br>" + player.age + "<br>" + player.club + "<br>";
+    }
+    
+    showPlayer();
+    
+    transferBtn.onclick = function() {
+      player.club = "PSG";
+      showPlayer();
+    }
+  </script>
+</body>
+</html>
